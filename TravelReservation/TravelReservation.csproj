@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C4DE5671-DFDB-44DA-BF9A-177085F4083A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TravelReservation</RootNamespace>
+    <AssemblyName>TravelReservation</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AbstractSeyahatFactory.cs" />
+    <Compile Include="Cadir.cs" />
+    <Compile Include="CadirRezervasyonu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadirRezervasyonu.Designer.cs">
+      <DependentUpon>CadirRezervasyonu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KayitEkrani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KayitEkrani.Designer.cs">
+      <DependentUpon>KayitEkrani.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Konaklama.cs" />
+    <Compile Include="KullaniciEkrani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KullaniciEkrani.Designer.cs">
+      <DependentUpon>KullaniciEkrani.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Otel.cs" />
+    <Compile Include="OtelRezervasyonu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtelRezervasyonu.Designer.cs">
+      <DependentUpon>OtelRezervasyonu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Otobus.cs" />
+    <Compile Include="Otobus_Cadir.cs" />
+    <Compile Include="Otobus_Otel.cs" />
+    <Compile Include="OtobüsRezervasyonu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtobüsRezervasyonu.Designer.cs">
+      <DependentUpon>OtobüsRezervasyonu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Seyahat.cs" />
+    <Compile Include="SeyahatRaporu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SeyahatRaporu.Designer.cs">
+      <DependentUpon>SeyahatRaporu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SqlManager.cs" />
+    <Compile Include="Ucak.cs" />
+    <Compile Include="Ucak_Cadir.cs" />
+    <Compile Include="Ucak_Otel.cs" />
+    <Compile Include="UcusRezervasyonu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UcusRezervasyonu.Designer.cs">
+      <DependentUpon>UcusRezervasyonu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ulasim.cs" />
+    <Compile Include="User.cs" />
+    <Compile Include="UserManager.cs" />
+    <EmbeddedResource Include="CadirRezervasyonu.resx">
+      <DependentUpon>CadirRezervasyonu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KayitEkrani.resx">
+      <DependentUpon>KayitEkrani.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KullaniciEkrani.resx">
+      <DependentUpon>KullaniciEkrani.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtelRezervasyonu.resx">
+      <DependentUpon>OtelRezervasyonu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtobüsRezervasyonu.resx">
+      <DependentUpon>OtobüsRezervasyonu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SeyahatRaporu.resx">
+      <DependentUpon>SeyahatRaporu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UcusRezervasyonu.resx">
+      <DependentUpon>UcusRezervasyonu.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\halıKilimTravel.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unknown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\do-you-want-to-travel-internationally.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\travelers.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\travler2.0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tourist-icon-png-10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\darkcyan.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
